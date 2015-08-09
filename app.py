@@ -119,7 +119,8 @@ class JobCrawler(object):
     def analyse(self):
         print u'开始分析职位需求---->'
         strx = open(self.config.file, 'r').read()
-        tags = analyse.extract_tags(strx, topK=30,withWeight=False)
+        strx = strx.upper()
+        tags = analyse.extract_tags(strx, topK=50,withWeight=False)
 
         #export to html file
         with(open(self.config.result_file, 'w')) as f:
