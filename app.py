@@ -131,7 +131,7 @@ class JobCrawler(object):
             f.writelines('<h1>' + prog_info + '</h1>')
             f.writelines('<ul>')
             for tag in tags:
-                f.writelines('<li>{0}</li>'.format(tag))
+                f.writelines('<li>{0}</li>'.format(tag.capitalize()))
             f.writelines('</ul>')
             f.writelines('</body></html>')
 
